@@ -42,7 +42,7 @@ git rm --force a.txt  //quita los cambios de a.txt eliminado el archivo de hard 
 
   
 ==================
-EN ALGUNA RAMA
+EN ALGUNA RAMA "X"
 ==================
 //regresar todo a un commit anterior
 git reset 34h7fhd3da --soft //mantiene aun la capacidad de deshacer 
@@ -56,4 +56,10 @@ git checkout 3hj8frh4f4 a.cpp //nos da la version del archivo a.cpp en el commit
 //ver las diferencias entre 2 commits
 git diff 3ed2rf23 8sdff2f2
 
+//operaciones con Ramas
+git branch 0NuevaRama //creando nueva rama partiendo desde rama "X"
+git branch 0NuevaRama 23dr3r4rr // creando nueva rama partiendo desde un commit especifico
+git merge 0RamaY //haciendo merge de la RamaY( traer y fusionar los cambios de ramaY a la rama "X" o rama actual )
+                 //me abre un vim , ya que es como un commit, se necesita un mensaje para el merge
+                 //en caso de conflicto, aceptar los cambios que llegan a la rama "X" o rechazarlos
 
