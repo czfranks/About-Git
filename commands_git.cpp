@@ -63,3 +63,34 @@ git merge 0RamaY //haciendo merge de la RamaY( traer y fusionar los cambios de r
                  //me abre un vim , ya que es como un commit, se necesita un mensaje para el merge
                  //en caso de conflicto, aceptar los cambios que llegan a la rama "X" o rechazarlos
 
+===============
+    GITHUB
+===============
+//agregar el origin a mi repositorio local, desde el repositorio en github
+git remote add origin url_repo.git
+
+//verificar las conexiones a el repositorio remoto
+git remote -v
+
+//Eliminar la conexion a el repositorio remoto
+git remote remove origin
+
+//Enviar la rama elegida(ejemplo master) a el repositorio remoto
+git push origin master
+git push origin MiRama
+
+//Descargar los cambios que se hayan hecho en el repositorio remoto
+git pull origin master
+//Descargar los cambios, permitir juntar los repositorios sin historias relacionadas
+git pull origin master --allow-related-histories
+
+
+
+
+
+
+
+
+
+
+
