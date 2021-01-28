@@ -34,6 +34,7 @@ git add .
 
 //mandar los cambios a la rama Actual
 git commit -m "Haciendo el commit"
+git commit -am "Haciendo (add .) y luego (commit)"
   
 //quitar todos los cambios puestos en el stagging Area
 git reset HEAD //quita los cambios sin eliminar nada en hard disk
@@ -84,6 +85,7 @@ git pull origin master
 //Descargar los cambios, permitir juntar los repositorios sin historias relacionadas
 git pull origin master --allow-related-histories
 
+------COMANDOS UTILES-------
 
 
 
