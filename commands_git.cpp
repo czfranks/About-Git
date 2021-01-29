@@ -88,7 +88,9 @@ git show-branch --all // mas detalles
     //creando la rama
     git branch ramaFranks
     git branch ramaJhon
-    
+    //ahora enviar la rama a el repositorio remoto
+    git push origin ramaFranks
+    git push origin ramaJhon    
 
 
 ===============
