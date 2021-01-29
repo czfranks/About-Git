@@ -1,5 +1,9 @@
 COMANDOS DE GIT - RESUMEN - POR FRANKS JHON
 
+//lista inmortal de alumnos de platzi que siguieron el curso
+//de git y github by Platzi
+https://freddier.github.io/hyperblog/blogpost.html
+
 ===============
 CONFIGURACION
 ===============
