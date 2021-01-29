@@ -10,4 +10,6 @@ Hago estas moficaciones en mi parte del archivo que me corresponde.
 Hola, soy Jhon y estoy modificando esta parte del archivo, como
 fue acordado.
 
+FRANKS DEBE ACEPTAR ESTOS CAMBIOS HECHOS POR MI JHON JHON JHON
+
 =============================================================
