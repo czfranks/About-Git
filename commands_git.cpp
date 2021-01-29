@@ -99,6 +99,10 @@ git show-branch --all // mas detalles
 //agregar el origin a mi repositorio local, desde el repositorio en github
 git remote add origin url_repo.git
 
+//agregar otra fuente remota
+git remote add <nombre_del_remoto> <url_del_remoto>
+git remote upstream url_nueva_repo.git
+
 //verificar las conexiones a el repositorio remoto
 git remote -v
 
@@ -165,3 +169,36 @@ git push origin --tags   //se actualizan los tags, pero si borre algun tag local
                          //no se borrara en el repositorio remoto
 git push origin :refs/tags/NombreDeMiTag //se actualiza el tag, se borra en caso de que lo borre en local                         
 
+
+============================
+    CREANDO PULL REQUEST
+============================
+//Si una rama es modificada y esta necesita ser agregada
+//a master , es de buena practica crear un pull request
+//para que el encargado del repositorio pueda aceptar los cambios
+//hechos y poder hacer un merge entre la rama y el master del repositorio
+
+vease la imagen [images/pull-request.png]
+
+=================
+    FORK
+=================
+//si queremos aportar a un repositorio podemos hacer un fork o bifurcacion
+//del proyecto y hacer las modificaciones y pedir un pull request
+//a el duenio del repositorio
+
+vease la imagen [images/forks.png]
+
+//Para tener actualizado el nuestro repositorio {fork-eado}
+//debemos tener una fuente remota adicional que apunte directamente
+//al el repositorio original [ NO nuestro repo fork-eado]
+git remote add upstream repo_original.git //tanto 'upstream' como 'origin' solo son nombres a los remotos
+
+//actualizamos nuestro repo local fork-eado, asi ya tenemos el repositorio local actualizado
+git pull upstream master
+
+//ahora actualizamos nuestro repositorio remoto fork-eado
+git push origin master
+
+//Ya podemos hacer modificaciones y mandar pull request a el repositorio original
+//si queremos seguir aportando
