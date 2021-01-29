@@ -88,6 +88,7 @@ git show-branch --all // mas detalles
     //creando la rama
     git branch ramaFranks
     git branch ramaJhon
+    
 
 
 ===============
