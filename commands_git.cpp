@@ -98,7 +98,10 @@ ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
 eval $(ssh-agent - s)
 ssh-add ~/.ssh/id_rsa
 
-
+//Ahora en la pagina web de Github, ingresar a
+//Mi Perfil -> Setting -> [New SSH Key] ->
+// y agregamos un titulo a la SSH Key y copiar muy importante
+//nuestra clave publica( id_rsa.pub ) y Aceptar.
 
 
 
