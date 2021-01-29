@@ -16,6 +16,13 @@ GENERAL
 //Ver el historial de commits
 git log
 git log --stat //ver con estadisticas
+git log --stat --all --graph --decorate --oneline // mas comprimido y en arbolito
+
+//Podemos hacer un alias para estos comandos largos
+//alias con 'linux'( queda guardado en ram?? )
+alias arbolito="git log --stat --all --graph --decorate --oneline"
+//en la 'configuracion de git'( queda guardado en hard disk )
+git config --global alias.superlog "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 
 //ver los cambios que se hicieron en un commit anterior
 git show 3e2h329h293eh29 //hash del commit
@@ -113,7 +120,20 @@ git remote -v //verificamos que la url ha cambiado
 // permanentemente nuestra conexion RSA a nuestra lista conocida de hosts.
 
 
+============
+    TAGS
+============
+//con estos podemos tener etiquetas de versiones o commits, de un proyecto
+//es muy util
 
+//Agregando tags
+git tag -a NombreDeMiTag -m "Mensaje de la creacion del tag"
 
+//ver lista de tags
+git tag             //solo nombres
+git show-ref --tags //con mas detalles
+
+//enviar los tags a nuestro repositorio remoto
+git push origin --tags
 
 
