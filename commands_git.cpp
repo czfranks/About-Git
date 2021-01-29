@@ -71,6 +71,25 @@ git merge 0RamaY //haciendo merge de la RamaY( traer y fusionar los cambios de r
                  //me abre un vim , ya que es como un commit, se necesita un mensaje para el merge
                  //en caso de conflicto, aceptar los cambios que llegan a la rama "X" o rechazarlos
 
+=======================
+    BRANCHES - RAMAS
+=======================
+//visualizar las ramas 
+git branch
+git branch --all //mas detalles ramas remotas ejemplo
+
+//visualizar commits en ramas
+git show-branch
+git show-branch --all // mas detalles
+
+//CREANDO RAMAS
+    //posicionarme en alguna rama master por ejemplo
+    git checkout master
+    //creando la rama
+    git branch ramaFranks
+    git branch ramaJhon
+
+
 ===============
     GITHUB
 ===============
