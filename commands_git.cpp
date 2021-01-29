@@ -134,6 +134,12 @@ git tag             //solo nombres
 git show-ref --tags //con mas detalles
 
 //enviar los tags a nuestro repositorio remoto
+git status //no se visualiza nada, los tags no son cambios
 git push origin --tags
 
+//Eliminar los tags
+git tag -d NombreDeMiTag //se elimina de nuestro repositorio local
+git push origin --tags   //se actualizan los tags, pero si borre algun tag local
+                         //no se borrara en el repositorio remoto
+git push origin :refs/tags/NombreDeMiTag //se actualiza el tag, se borra en caso de que lo borre en local                         
 
