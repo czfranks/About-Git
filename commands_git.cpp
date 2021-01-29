@@ -106,6 +106,11 @@ ssh-add ~/.ssh/id_rsa
 //Para terminar debemos actualizar la url de conexion de nuestro repositorio Remoto
 git remote -v //verificamos que teniamos ya un remote a nuestro repositorio remoto
 git remote set-url origin git@github.com:gitczfranks/About-Git.git //
+git remote -v //verificamos que la url ha cambiado
+
+//Actualizar con 'pull'  y hacer cambios 'commit' en nuestro repositorio local
+//al momento de hacer un 'push' a el repo remoto, aceptar 'yes' conectar y agregar
+// permanentemente nuestra conexion RSA a nuestra lista conocida de hosts.
 
 
 
