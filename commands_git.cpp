@@ -85,8 +85,18 @@ git pull origin master
 //Descargar los cambios, permitir juntar los repositorios sin historias relacionadas
 git pull origin master --allow-related-histories
 
-------COMANDOS UTILES-------
-
+=============================
+CONEXION MEDIATE SSH A GITHUB
+=============================
+//Generar una nueva llave SSH: (Cualquier sistema operativo)
+ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
+/*
+    Se generan 2 archivos, id_rsa y id_rsa.pub, llave privada y llave publica respectivamente
+    la clave privada la agregamos a el ssh agent y la protegenemos de la siguiente manera.
+*/
+//Comprobar proceso y agregarlo
+eval $(ssh-agent - s)
+ssh-add ~/.ssh/id_rsa
 
 
 
