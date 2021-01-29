@@ -103,6 +103,9 @@ ssh-add ~/.ssh/id_rsa
 // y agregamos un titulo a la SSH Key y copiar muy importante
 //nuestra clave publica( id_rsa.pub ) y Aceptar.
 
+//Para terminar debemos actualizar la url de conexion de nuestro repositorio Remoto
+git remote -v //verificamos que teniamos ya un remote a nuestro repositorio remoto
+git remote set-url origin git@github.com:gitczfranks/About-Git.git //
 
 
 
