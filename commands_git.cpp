@@ -206,3 +206,10 @@ git push origin master
 
 //Ya podemos hacer modificaciones y mandar pull request a el repositorio original
 //si queremos seguir aportando
+
+================
+  GITHUB PAGES
+================
+
+//Crear una pagina web mediante el dominio que nos brinda https://pages.github.com/
+//es gratis.
