@@ -120,6 +120,29 @@ git branch -D ramaFranks //git branch --delete --force ramaFranks
 //-d "cuando todo se haya hecho push y merge"
 //-D "no importa el status, se elimina la rama, cuidado con este commando"
 
+
+//Rebase!! - este comando no es de buena practica, pero util si queremos borrar rastro
+//de que creamos una rama, posiblemente errada e innecesaria
+//El util funcionamiento seria, por ejemplo:
+//          1) Creo la rama Chiste, desde la rama master, y hago algunas modificaciones.
+//              estas modificaciones las debi hacer en master, no habia ningun problema.
+//          2) Ahora avance algunas modificaciones en master, y tengo q juntar todo, hacer un 
+//             merge de master y Chiste, pero quedaran historia de que cree una rama innecesaria
+//          3) Solucion: REBASE - de la siguiente manera.
+                    git checkout Chiste
+                    //hago quiza algunos cambios extras
+                    git commit -am "cambios en Chiste"
+                    git rebase master //me traigo los cambios de master
+                    
+                    git checkout master
+                    git rebase Chiste //unifico entonces la historia de rama Chiste en la rama master
+                                      //como si nunca hubiera existido la rama Chiste, como una lista
+                                      //de commits de manera lineal, di quiero elimino la rama Chiste.
+                                      //y no queda rastro alguno de que hize cosas feas , OJO no se borra
+                                      //la historia de commits de ramaChiste, estos commits se copian como
+                                      //si los hubiera hecho en master.
+
+
 ===============
     GITHUB
 ===============
