@@ -114,6 +114,11 @@ git show-branch --all // mas detalles
     git push origin ramaFranks
     git push origin ramaJhon    
 
+//eliminar Ramas
+git branch -d ramaFranks //git branch --delete ramaFranks
+git branch -D ramaFranks //git branch --delete --force ramaFranks
+//-d "cuando todo se haya hecho push y merge"
+//-D "no importa el status, se elimina la rama, cuidado con este commando"
 
 ===============
     GITHUB
