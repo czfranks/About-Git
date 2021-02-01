@@ -120,6 +120,9 @@ git branch -D ramaFranks //git branch --delete --force ramaFranks
 //-d "cuando todo se haya hecho push y merge"
 //-D "no importa el status, se elimina la rama, cuidado con este commando"
 
+//eliminar Ramas en remoto
+git push <remote-name> --delete <branch-name>
+git push origin --delete ramaABorrar
 
 //Rebase!! - este comando no es de buena practica, pero util si queremos borrar rastro
 //de que creamos una rama, posiblemente errada e innecesaria
