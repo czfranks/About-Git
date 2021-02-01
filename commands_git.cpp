@@ -52,6 +52,24 @@ git reset HEAD //quita los cambios sin eliminar nada en hard disk
 git rm --cached a.txt //quita los cambios de a.txt sin eliminar nada en hard disk
 git rm --force a.txt  //quita los cambios de a.txt eliminado el archivo de hard disk
 
+//STACHED - nos sive para guardar cambios que no han sido agregados
+//a el stagging area, son simplemente cambios que podemos guardar en memoria
+//y regresar a el ultimo commit actualizado de nuestra rama actual
+
+//guardar los ultimos cambios en un stash
+git stash
+git stash save "mensaje: Guardando cambios que aun no necesito"
+//stash = todos los cambios que hice, pero por alguna razon no los quiero por ahora
+
+//lista de todos mis stash
+git stash list
+
+//recuperar la memoria de los cambios en mi stash a mi rama actual
+git stash pop
+
+//eliminar la memoria de mi stash
+git stash drop
+
   
 ==================
 EN ALGUNA RAMA "X"
