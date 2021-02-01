@@ -32,6 +32,12 @@ git config --global alias.superlog "log --graph --abbrev-commit --decorate --dat
 git show 3e2h329h293eh29 //hash del commit
 git show a.cpp //cambios que se hicieron en a.cpp
 
+//borrar archivos trackeados por git( no incluyen los archivos reconocidos por .gitignore )
+//que no necesitamos, ojo estos archivos son nuevos( no pasaron por 'git add .' )
+git clean --dry-run //nos advierte cuales se borraran
+git clean -f        //removera todos los archivos advertidos
+git clean -df       //el parametro de borrara tambien los archivos untracked(no trackeados debido a .gitignore)
+
 
 ===============
 STAGGING AREA
