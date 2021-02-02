@@ -17,6 +17,7 @@ git config --list
 ===============
 GENERAL
 ===============
+
 //acceder a la documentacion de cualquier comando git
 git <command> --help
 
@@ -29,7 +30,7 @@ git log --stat --all --graph --decorate --oneline // mas comprimido y en arbolit
 //alias con 'linux'( queda guardado en ram?? )
 alias arbolito="git log --stat --all --graph --decorate --oneline"
 //en la 'configuracion de git'( queda guardado en hard disk )
-git config --global alias.superlog "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+git config --global alias.arbolito "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 
 //ver los cambios que se hicieron en un commit anterior
 git show 3e2h329h293eh29 //hash del commit
@@ -139,8 +140,10 @@ git cherry-pick 23h23hd29h -n //trae los cambios del commit, pero no hace commit
     BRANCHES - RAMAS
 =======================
 //visualizar las ramas 
-git branch
+git branch       //ramas locales actuales
 git branch --all //mas detalles ramas remotas ejemplo
+git branch -a    //lo mismo que --all
+git branch -r    //ramas remotas 
 
 //visualizar commits en ramas
 git show-branch
@@ -191,6 +194,7 @@ git push origin --delete ramaABorrar
 ===============
     GITHUB
 ===============
+
 //agregar el origin a mi repositorio local, desde el repositorio en github
 git remote add origin url_repo.git
 
