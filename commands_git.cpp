@@ -17,6 +17,9 @@ git config --list
 ===============
 GENERAL
 ===============
+//acceder a la documentacion de cualquier comando git
+git <command> --help
+
 //Ver el historial de commits
 git log
 git log --stat //ver con estadisticas
@@ -38,6 +41,24 @@ git clean --dry-run //nos advierte cuales se borraran
 git clean -f        //removera todos los archivos advertidos
 git clean -df       //el parametro de borrara tambien los archivos untracked(no trackeados debido a .gitignore)
 
+=============================================================================
+    BUSCANDO KEYWORDS - STATS - COUNT WORDS - OCCURENCES - COMMITS AUTHORS
+=============================================================================
+//buscar palabras en ficheros
+git grep color //muestra los ficheros donde hay ocurrencias.
+git grep -n color // -n : muestra tambien la linea donde hubo ocurrencia
+git grep -c color // -c : cuenta el numero de ocurrencias de color por fichero
+
+//buscar palabras en commits
+git log -S "color" 
+
+//comandos y recursos colaborativos
+git shortlog     //commits y su respectivo autor
+git shortlog -sn //contador de commits de cada autor
+git shortlog -sn --all // |--> se suman los que han sido eliminados tambien
+
+git blame miarchivo.txt //muestra linea por linea quien modifico tal linea.
+git blame miarchivo.txt -L2:5 //desde la linea 2 hasta la linea 5
 
 ===============
 STAGGING AREA
@@ -52,7 +73,14 @@ git add .
 //mandar los cambios a la rama Actual
 git commit -m "Haciendo el commit"
 git commit -am "Haciendo (add .) y luego (commit)"
-  
+
+//reconstruir un commit
+//me equivoque y no olvide hacer un cambio que deberia ir en el ultimo commit??
+git add archivomodificado //muy importante hacer git add, para tenerlo en el stagging area listo para commit
+git commit -amend         //se abrira un vim, podriamos cambiar tambien el nombre del commit
+                          //y asi los cambios se agregaran a mi ultimo commit
+git commit -amend --no-edit // no se abrira vim, permanece el mensaje del commit                          
+
 //quitar todos los cambios puestos en el stagging Area
 git reset HEAD //quita los cambios sin eliminar nada en hard disk
 git rm --cached a.txt //quita los cambios de a.txt sin eliminar nada en hard disk
