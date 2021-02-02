@@ -76,6 +76,9 @@ git stash pop
 //eliminar la memoria de mi stash
 git stash drop
 
+//guardar los cambios en memoria en una rama nueva
+git stash //primero guardar los cambios en memoria
+git stash branch ramaNuevaDeStash
   
 ==================
 EN ALGUNA RAMA "X"
@@ -98,6 +101,11 @@ git branch 0NuevaRama 23dr3r4rr // creando nueva rama partiendo desde un commit 
 git merge 0RamaY //haciendo merge de la RamaY( traer y fusionar los cambios de ramaY a la rama "X" o rama actual )
                  //me abre un vim , ya que es como un commit, se necesita un mensaje para el merge
                  //en caso de conflicto, aceptar los cambios que llegan a la rama "X" o rechazarlos
+
+//Traer un commit de alguna rama al head de mi rama actual( MALA PRACTICA )
+git cherry-pick 23h23hd29h    //hace un commit copia del commit que se trae( 23h23hd29h ) 
+git cherry-pick 23h23hd29h -e //permite editar el mensaje del commit
+git cherry-pick 23h23hd29h -n //trae los cambios del commit, pero no hace commit
 
 =======================
     BRANCHES - RAMAS
@@ -131,7 +139,7 @@ git push <remote-name> --delete <branch-name>
 git push origin --delete ramaABorrar
 
 //Rebase!! - este comando no es de buena practica, pero util si queremos borrar rastro
-//de que creamos una rama, posiblemente errada e innecesaria
+//de que creamos una rama, posiblemente errada e innecesaria ( MALA PRACTICA )
 //El util funcionamiento seria, por ejemplo:
 //          1) Creo la rama Chiste, desde la rama master, y hago algunas modificaciones.
 //              estas modificaciones las debi hacer en master, no habia ningun problema.
