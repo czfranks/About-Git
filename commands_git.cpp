@@ -62,7 +62,7 @@ git blame miarchivo.txt //muestra linea por linea quien modifico tal linea.
 git blame miarchivo.txt -L2:5 //desde la linea 2 hasta la linea 5
 
 ===============
-STAGGING AREA
+STAGGING AREA - no tracked files
 ===============
 //verificar el estatus de git( archivos nuevos, editados, borrados, etc)
 git status
