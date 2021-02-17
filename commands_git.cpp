@@ -78,9 +78,9 @@ git commit -am "Haciendo (add .) y luego (commit)"
 //reconstruir un commit
 //me equivoque y no olvide hacer un cambio que deberia ir en el ultimo commit??
 git add archivomodificado //muy importante hacer git add, para tenerlo en el stagging area listo para commit
-git commit -amend         //se abrira un vim, podriamos cambiar tambien el nombre del commit
+git commit --amend         //se abrira un vim, podriamos cambiar tambien el nombre del commit
                           //y asi los cambios se agregaran a mi ultimo commit
-git commit -amend --no-edit // no se abrira vim, permanece el mensaje del commit                          
+git commit --amend --no-edit // no se abrira vim, permanece el mensaje del commit                          
 
 //quitar todos los cambios puestos en el stagging Area
 git reset HEAD //quita los cambios sin eliminar nada en hard disk
