@@ -10,6 +10,9 @@ CONFIGURACION
 //configurar el nombre & email del usuario
 git config --global user.name "mi nombre"
 git config --global user.email "mi email"
+git config --global init.defaultBranch main
+git config --global color.ui auto
+
 
 //listar las configuraciones
 git config --list
